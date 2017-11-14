@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitor Network
+After=network.target
+
+[Service]
+#User=root
+ExecStart=/home/root/sources/vprobe/embedded/main.py
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
